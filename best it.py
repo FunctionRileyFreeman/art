@@ -223,7 +223,7 @@ while running:
             bird_flight_height = random.randint(100, 300)  # New flight height for the bird
 
     pygame.display.flip()
-    clock.tick(30)  # Limit frame rate to 30 FPS
+    clock.tick(60)  # Limit frame rate to 30 FPS
 
 pygame.quit()
 sys.exit()
