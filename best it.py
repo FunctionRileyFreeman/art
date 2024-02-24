@@ -57,8 +57,10 @@ def draw_grass():
         x, y = pos
         height = random.randint(5, 15)  # Random height of the grass blade
         sway = math.sin(x * sway_frequency) * sway_amplitude  # Swaying motion based on x-coordinate
+
         # Adjust color change
-        color = (0, 100 + int(100 * math.sin(x * color_change_frequency)), 0)  # Methodical color change
+        green = 150 + int(30 * math.sin(x * color_change_frequency))  # Ensure minimum green value is 150
+        color = (0, green, 0)  # Methodical color change
         pygame.draw.line(screen, color, (x, y), (x + sway, y - height), 2)
 
 
