@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto-Mono)
+
+$bgColor = #FF7373
+$containerColor = transparent
+$containerWidth = 272px
+$containerHeight = 100px
+$containerBorderRadius = 4px
+
+*
+  transition all .5s
+  box-sizing border-box
+
+body
+  background $bgColor
+  margin 0
+  padding 0
+  display flex
+  justify-content center
+  align-items center
+  width 100vw
+  height 100vh
+  perspective 300px
+  .container
+    background $containerColor
+    border-radius $containerBorderRadius
+    width $containerWidth
+    height $containerHeight
+    transform rotateY(0deg)
+    transform-style preserve-3d
+    .front
+      background white
+      transform rotateY(0deg)
+      z-index 2
+    .back
+      background white
+      transform rotateY(180deg)
+    .front, .back
+      position absolute
+      display flex
+      align-items center
+      justify-content space-between
+      backface-visibility hidden
+      width $containerWidth
+      height $containerHeight
+      border-radius $containerBorderRadius
+      .decrement, .increment
+        width 64px
+        height $containerHeight
+        opacity .2
+        &:hover
+          cursor pointer
+      .decrement
+        background url("http://frolovoleg.ru/images/decrement.svg") no-repeat center
+      .increment
+        background url("http://frolovoleg.ru/images/increment.svg") no-repeat center
+      .value_front, .value_back
+        user-select none
+        font-size 32px
+        line-height $containerHeight
+        font-family "Roboto Mono", "Courier", monospace

@@ -1,0 +1,15 @@
+#quantumCanvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    width: 600px; /* Increased width */
+    height: 300px; /* Increased height */
+    display: block; /* Ensure it's properly displayed */
+    margin-top: 20px;
+  }
+  
+  /* Additional styling for the slider */
+  #wavelengthSlider {
+    width: 100%; /* Full width to fit under the canvas */
+    margin: 20px 0;
+  }
+  
